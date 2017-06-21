@@ -31,4 +31,31 @@ class DataStore{
         def.synchronize()
     }
     
+    
+    func GetLastLocation () -> VisitedPoint?{
+        
+        let defaults = GetDefaults()
+        
+        if let lat = defaults.string(forKey: StorageKeys.storedLat){
+            if let long = defaults.string(forKey: StorageKeys.storedLong){
+                return VisitedPoint(lat: lat, long: long)
+            }
+        }
+        return nil
+    }
+    
+    
+    
+    
 }
+
+
+
+
+
+
+
+
+
+
+
