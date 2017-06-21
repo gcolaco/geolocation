@@ -30,10 +30,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let coord = locationManager.location?.coordinate
         
         if let lat = coord?.latitude {
-            print("Lati: " + String(lat))
-        }
-        if let long = coord?.longitude{
-            print("Long: " + String(long))
+            if let long = coord?.longitude{
+                DataStore().StoreDataPoint(latitude: String(lat), longitude: String(long))
+            }
         }
         
     }

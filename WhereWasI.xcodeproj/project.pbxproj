@@ -13,6 +13,8 @@
 		721F3A0E1EFA2DFE005BAEE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 721F3A0D1EFA2DFE005BAEE1 /* Assets.xcassets */; };
 		721F3A111EFA2DFE005BAEE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 721F3A0F1EFA2DFE005BAEE1 /* LaunchScreen.storyboard */; };
 		721F3A1A1EFA3575005BAEE1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721F3A191EFA3575005BAEE1 /* MapKit.framework */; };
+		72B197031EFAFE33000DA0A9 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B197021EFAFE33000DA0A9 /* DataModel.swift */; };
+		72B197051EFB002F000DA0A9 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B197041EFB002F000DA0A9 /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		721F3A101EFA2DFE005BAEE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		721F3A121EFA2DFE005BAEE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		721F3A191EFA3575005BAEE1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		72B197021EFAFE33000DA0A9 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		72B197041EFB002F000DA0A9 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				721F3A0D1EFA2DFE005BAEE1 /* Assets.xcassets */,
 				721F3A0F1EFA2DFE005BAEE1 /* LaunchScreen.storyboard */,
 				721F3A121EFA2DFE005BAEE1 /* Info.plist */,
+				72B197021EFAFE33000DA0A9 /* DataModel.swift */,
+				72B197041EFB002F000DA0A9 /* DataStore.swift */,
 			);
 			path = WhereWasI;
 			sourceTree = "<group>";
@@ -149,7 +155,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				721F3A091EFA2DFE005BAEE1 /* ViewController.swift in Sources */,
+				72B197051EFB002F000DA0A9 /* DataStore.swift in Sources */,
 				721F3A071EFA2DFE005BAEE1 /* AppDelegate.swift in Sources */,
+				72B197031EFAFE33000DA0A9 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +321,7 @@
 				721F3A171EFA2DFE005BAEE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
