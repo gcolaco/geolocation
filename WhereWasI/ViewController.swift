@@ -7,12 +7,47 @@
 //
 
 import UIKit
+import MapKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
 
+    @IBOutlet weak var mapView: MKMapView!
+    
+    let locationManager = CLLocationManager()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
+    }
+    
+    @IBAction func SaveButtonClicked(_ sender: Any) {
+        let coord = locationManager.location?.coordinate
+        
+        if let lat = coord?.latitude {
+            print("Lati: " + String(lat))
+        }
+        if let long = coord?.longitude{
+            print("Long: " + String(long))
+        }
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        guard status == .authorizedWhenInUse else {
+            print("location not enabled")
+            return
+        }
+        
+        print("location allowed")
+        mapView.showsUserLocation = true
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,4 +57,11 @@ class ViewController: UIViewController {
 
 
 }
+
+
+
+
+
+
+
 

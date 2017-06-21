@@ -23,17 +23,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jIQ-tz-zWP">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </mapView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSi-7n-xtA">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Where Was I?" id="4ma-L8-wAZ">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="spA-vc-DSx">
+                                            <connections>
+                                                <action selector="SaveButtonClicked:" destination="BYZ-38-t0r" id="hvT-Xp-14t"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jIQ-tz-zWP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="72A-3k-Fob"/>
+                            <constraint firstAttribute="trailing" secondItem="zSi-7n-xtA" secondAttribute="trailing" id="7lh-d1-2Pi"/>
+                            <constraint firstItem="zSi-7n-xtA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="C2g-sz-5Zj"/>
                             <constraint firstItem="jIQ-tz-zWP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Kz8-Vo-UaN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jIQ-tz-zWP" secondAttribute="bottom" id="Smw-dP-FFU"/>
+                            <constraint firstItem="zSi-7n-xtA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Yng-K3-FAL"/>
                             <constraint firstAttribute="trailing" secondItem="jIQ-tz-zWP" secondAttribute="trailing" id="qCJ-sf-Ran"/>
+                            <constraint firstItem="jIQ-tz-zWP" firstAttribute="top" secondItem="zSi-7n-xtA" secondAttribute="bottom" id="tq9-bP-AN2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="jIQ-tz-zWP" id="ddj-Qc-A4b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
